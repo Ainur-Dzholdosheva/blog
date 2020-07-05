@@ -1,0 +1,15 @@
+.Post {
+  box-shadow: 0 0 5px black;
+  width: 250px;
+  padding: 0 1rem;
+  margin: 0.5rem;
+}
+.Blog {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.Blog h3 {
+  width: 100%;
+  text-align: center;
+}
