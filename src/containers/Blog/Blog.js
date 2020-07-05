@@ -7,12 +7,16 @@ export default () => {
 
   useEffect(() => {
     axios.get("http://jsonplaceholder.typicode.com/posts").then((response) => {
+      response.data.forEach((post) => {
+        post.author = "Bakyt";
+      });
+
       setPosts(response.data);
     });
   }, []);
 
   const postsOutput = posts.map((post) => (
-    <Post key={post.id} title={post.title} />
+    <Post key={post.id} title={post.title} author={post.author} />
   ));
   return (
     <div className="Blog">
